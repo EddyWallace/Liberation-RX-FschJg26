@@ -7,8 +7,8 @@
 huron_typename = "LOP_UKR_Mi8MT_Cargo";
 FOB_typename = "Land_Cargo_HQ_V1_F";
 Respawn_truck_typename = "LOP_UKR_KAMAZ_Medical";  //"rhsusf_m113_usarmy_medical"
-//FOB_box_typename = "B_Slingload_01_Cargo_F";
-//FOB_truck_typename = "B_Truck_01_box_F";
+FOB_box_typename = "B_Slingload_01_Cargo_F";
+FOB_truck_typename = "B_Truck_01_box_F";
 pilot_classname = "LOP_UKR_Infantry_crew";
 crewman_classname = "LOP_UKR_Infantry_crew";
 A3W_BoxWps = "rhsgref_weapons_crate";  	 //"rhs_weapon_crate";

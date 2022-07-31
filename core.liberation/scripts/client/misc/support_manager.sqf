@@ -1,3 +1,4 @@
+/*
 waitUntil { sleep 1; !isNil "blufor_sectors" };
 private ["_near_arsenal", "_primary_weapon", "_near_medic", "_needammo1", "_needammo2", "_maxpri", "_minpri", "_needmedic", "_magType", "_list_vehicles", "_guid", "_static_ai"];
 
@@ -145,3 +146,4 @@ while { true } do {
 
 	sleep 15;
 };
+*/

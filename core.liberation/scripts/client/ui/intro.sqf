@@ -59,3 +59,19 @@ dostartgame = 1;
 // Load Player Context
 waitUntil {sleep 1; GRLIB_player_spawned};
 [player] remoteExec ["load_context_remote_call", 2];
+
+removeAllWeapons player;
+
+// Wait for TFAR init
+if (! ([] call TFAR_fnc_isTeamSpeakPluginEnabled)) then {
+	
+	10000 cutText ["You are not connected to our TeamSpeak 3\nPlease join our TS3: 45.157.233.222", "BLACK OUT", -1, true];
+
+	waitUntil {
+		sleep 10;
+
+		[] call TFAR_fnc_isTeamSpeakPluginEnabled
+	};
+
+	10000 cutText ['', "BLACK IN", 1];
+}

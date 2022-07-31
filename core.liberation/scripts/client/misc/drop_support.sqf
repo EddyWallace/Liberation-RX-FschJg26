@@ -1,3 +1,4 @@
+/*
 private ["_class",  "_cost"];
 private _timer = player getVariable ["AirCoolDown", 0];
 if (_timer > time) exitWith {hint format ["Air Support not ready !\nNext call in %1 min\n\nPlease wait...", round ((_timer - time)/60)]};
@@ -46,3 +47,4 @@ if (do_action == 1) then {
 	[player, _class] remoteExec ["airdrop_remote_call", 2];
 	player setVariable ["AirCoolDown", round(time + 15*60)];
 };
+*/

@@ -162,7 +162,7 @@ while { true } do {
 		} else {
 			_posfob = getpos player;
 			if (buildtype != 99) then {
-				_posfob = [] call F_getNearestFob;
+				_posfob = [(getPos player), true] call F_getNearestFob;
 			};
 
 			_idactcancel = -1;

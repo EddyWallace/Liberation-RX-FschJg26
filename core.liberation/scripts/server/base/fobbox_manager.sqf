@@ -3,10 +3,10 @@ waitUntil {sleep 1; !isNil "save_is_loaded" };
 
 private [ "_fobbox", "_foblist" ];
 
-_fob_type = FOB_box_typename;
-if ( GRLIB_fob_type == 1 ) then {
-	_fob_type = FOB_truck_typename;
-};
+_fob_type = FOB_truck_typename; // FOB_box_typename;
+// if ( GRLIB_fob_type == 1 ) then {
+// 	_fob_type = FOB_truck_typename;
+// };
 
 while { true } do {
 

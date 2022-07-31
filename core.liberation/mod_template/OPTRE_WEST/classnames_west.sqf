@@ -5,16 +5,14 @@
 
 huron_typename = "OPTRE_Pelican_unarmed";
 FOB_typename = "Land_ArmoryA_Green";
-//FOB_box_typename = "B_Slingload_01_Cargo_F";
+FOB_box_typename = "B_Slingload_01_Cargo_F";
 FOB_truck_typename = "OPTRE_m1087_stallion_device_unsc";
 FOB_outpost = "Land_OPTRE_mod_building_green";
-//FOB_box_outpost = "Land_Cargo10_grey_F"
+FOB_box_outpost = "Land_Cargo10_grey_F"
 Arsenal_typename = "OPTRE_Ammo_Rack_Weapons";
 Respawn_truck_typename = "OPTRE_M313_UNSC";
 pilot_classname = "OPTRE_UNSC_Army_Soldier_Crewman_OLI";
 crewman_classname = "OPTRE_UNSC_Airforce_Soldier_Airman";
-PAR_Medikit = "OPTRE_MedKit";
-PAR_AidKit = "OPTRE_Biofoam";
 A3W_BoxWps = "OPTRE_Ammo_Rack_Ammo";
 Respawn_truck_typename = "OPTRE_m1087_stallion_unsc_medical";
 ammo_truck_typename = "OPTRE_m1087_stallion_unsc_resupply";

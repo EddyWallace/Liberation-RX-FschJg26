@@ -3,10 +3,10 @@
 // Default classname: scripts\shared\default_classnames.sqf
 // Advanced definition: scripts\shared\classnames.sqf
 
-//huron_typename = "B_Heli_Transport_03_unarmed_F";  // comment to use value from lobby/server.cfg
+huron_typename = "B_Heli_Transport_03_unarmed_F";  // comment to use value from lobby/server.cfg
 FOB_typename = "Land_Cargo_HQ_V1_F";
 FOB_box_typename = "B_Slingload_01_Cargo_F";
-FOB_truck_typename = "B_Truck_01_box_F" ;
+FOB_truck_typename = "rhsusf_m113_usarmy_unarmed" ;
 Respawn_truck_typename = "B_Truck_01_medical_F";
 ammo_truck_typename = "B_Truck_01_ammo_F";
 fuel_truck_typename = "B_Truck_01_fuel_F";
@@ -20,25 +20,23 @@ crewman_classname = "B_crew_F";
 
 // [CLASSNAME, MANPOWER, AMMO, FUEL, RANK]
 infantry_units_west = [
-	["Alsatian_Random_F",0,0,0,GRLIB_perm_max],
-	["Fin_random_F",0,0,0,0],
-	["B_Soldier_F",1,0,0,0],
-	["B_medic_F",1,0,0,0],
-	["B_engineer_F",1,0,0,0],
-	["B_Soldier_GL_F",1,0,0,GRLIB_perm_inf],
-	["B_soldier_M_F",1,0,0,GRLIB_perm_inf],
-	["B_soldier_LAT_F",1,0,0,0],
-	["B_Sharpshooter_F",1,0,0,GRLIB_perm_inf],
-	["B_HeavyGunner_F",1,0,0,GRLIB_perm_inf],
-	["B_recon_F",1,0,0,GRLIB_perm_log],
-	["B_diver_F",1,0,0,GRLIB_perm_log],
-	["B_Recon_Sharpshooter_F",1,0,0,GRLIB_perm_log],
-	["B_soldier_AA_F",1,0,0,GRLIB_perm_log],
-	["B_soldier_AT_F",1,0,0,GRLIB_perm_log],
-	["B_sniper_F",1,0,0,GRLIB_perm_log],
-	["B_soldier_PG_F",1,0,0,GRLIB_perm_log],
-	[crewman_classname,1,0,0,GRLIB_perm_inf],
-	[pilot_classname,1,0,0,GRLIB_perm_log]
+	// ["B_Soldier_F",1,0,0,0],
+	// ["B_medic_F",1,0,0,0],
+	// ["B_engineer_F",1,0,0,0],
+	// ["B_Soldier_GL_F",1,0,0,GRLIB_perm_inf],
+	// ["B_soldier_M_F",1,0,0,GRLIB_perm_inf],
+	// ["B_soldier_LAT_F",1,0,0,0],
+	// ["B_Sharpshooter_F",1,0,0,GRLIB_perm_inf],
+	// ["B_HeavyGunner_F",1,0,0,GRLIB_perm_inf],
+	// ["B_recon_F",1,0,0,GRLIB_perm_log],
+	// ["B_diver_F",1,0,0,GRLIB_perm_log],
+	// ["B_Recon_Sharpshooter_F",1,0,0,GRLIB_perm_log],
+	// ["B_soldier_AA_F",1,0,0,GRLIB_perm_log],
+	// ["B_soldier_AT_F",1,0,0,GRLIB_perm_log],
+	// ["B_sniper_F",1,0,0,GRLIB_perm_log],
+	// ["B_soldier_PG_F",1,0,0,GRLIB_perm_log],
+	// [crewman_classname,1,0,0,GRLIB_perm_inf],
+	// [pilot_classname,1,0,0,GRLIB_perm_log]
 ];
 
 units_loadout_overide = [

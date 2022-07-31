@@ -107,9 +107,9 @@ if (!GRLIB_ACE_enabled) then {
 	[] execVM "scripts\client\misc\support_manager.sqf";
 };
 
-[] execVM "addons\PAR\PAR_AI_Revive.sqf";
+// [] execVM "addons\PAR\PAR_AI_Revive.sqf";
 [] execVM "addons\LARs\liberationArsenal.sqf";
-[] execVM "addons\VIRT\virtual_garage_init.sqf";
+// [] execVM "addons\VIRT\virtual_garage_init.sqf";
 [] execVM "addons\TARU\taru_init.sqf";
 
 // Init Tips Tables from XML

@@ -1,3 +1,5 @@
+/*
+
 // Community Base Addons
 force force cba_disposable_dropUsedLauncher = 0;
 force force cba_disposable_replaceDisposableLauncher = false;
@@ -13,3 +15,5 @@ force ace_medical_statemachine_fatalInjuriesPlayer = 2; // Disabled fatal injuri
 force ace_medical_treatment_advancedBandages = 0; // Disabled advanced bandages
 force ace_medical_treatment_advancedDiagnose = 0; // Disabled advanced diagnose
 force ace_medical_treatment_advancedMedication = false; // Disabled advanced medication
+
+*/

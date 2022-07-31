@@ -6222,63 +6222,6 @@
 		</Key>
 	</Package>
 
-	<Package name="LRX_SELL">
-		<Key ID="STR_SELL_NAME">
-			<Original>-- Sell Shop --</Original>
-			<Chinesesimp>-- 当铺 --</Chinesesimp>
-			<Chinese>-- 当铺 --</Chinese>
-		</Key>
-	</Package>
-
-	<Package name="LRX_SHOP">
-		<Key ID="STR_SHOP_NAME">
-			<Original>-- Traders Shop --</Original>
-			<Chinesesimp>-- 贸易商店 --</Chinesesimp>
-			<Chinese>-- 貿易商店 --</Chinese>
-		</Key>
-		<Key ID="STR_SHOP_ENTER">
-			<Original>-- ENTER SHOP</Original>
-			<Chinesesimp>-- 进入店铺 --</Chinesesimp>
-			<Chinese>-- 進入店鋪 --</Chinese>
-		</Key>
-		<Key ID="STR_SHOP_ACTION1">
-			<Original>SELL</Original>
-			<French>VENDRE</French>
-			<Chinesesimp>出售</Chinesesimp>
-			<Chinese>出售</Chinese>
-		</Key>
-		<Key ID="STR_SHOP_ACTION2">
-			<Original>BUY</Original>
-			<French>ACHETER</French>
-			<Chinesesimp>购买</Chinesesimp>
-			<Chinese>購買</Chinese>
-		</Key>
-		<Key ID="STR_SHOP_SELL">
-			<Original>SELL VEHICLE</Original>
-			<French>VENDRE VEHICULE</French>
-			<Chinesesimp>出售载具</Chinesesimp>
-			<Chinese>出售載具</Chinese>
-		</Key>
-		<Key ID="STR_SHOP_SELL_MSG">
-			<Original>&lt;t align='center'&gt;Sell %1&lt;br/&gt;for %2 AMMO.&lt;br/&gt;Are you sure ?&lt;/t&gt;</Original>
-			<French>&lt;t align='center'&gt;Vendre %1&lt;br/&gt;pour %2 AMMO.&lt;br/&gt;Êtes-vous sûr ?&lt;/t&gt;</French>
-			<Chinesesimp>&lt;t align='center'&gt;出售 %1&lt;br/&gt;以获得 %2 弹药。&lt;br/&gt;你确定吗？&lt;/t&gt;</Chinesesimp>
-			<Chinese>&lt;t align='center'&gt;出售 %1&lt;br/&gt;以獲得 %2 彈藥。 &lt;br/&gt;你確定嗎？ &lt;/t&gt;</Chinese>
-		</Key>
-		<Key ID="STR_SHOP_BUY">
-			<Original>BUY VEHICLE</Original>
-			<French>ACHETER VEHICULE</French>
-			<Chinesesimp>购买载具</Chinesesimp>
-			<Chinese>購買載具</Chinese>
-		</Key>
-		<Key ID="STR_SHOP_BUY_MSG">
-			<Original>&lt;t align='center'&gt;Sell %1&lt;br/&gt;for %2 AMMO.&lt;br/&gt;Are you sure ?&lt;/t&gt;</Original>
-			<French>&lt;t align='center'&gt;Acheter %1&lt;br/&gt;pour %2 AMMO.&lt;br/&gt;Êtes-vous sûr ?&lt;/t&gt;</French>
-			<Chinesesimp>&lt;t align='center'&gt;出售 %1&lt;br/&gt;以获得 %2 弹药。&lt;br/&gt;你确定吗？&lt;/t&gt;</Chinesesimp>
-			<Chinese>&lt;t align='center'&gt;出售 %1&lt;br/&gt;以獲得 %2 彈藥。 &lt;br/&gt;你確定嗎？ &lt;/t&gt;</Chinese>
-		</Key>
-	</Package>
-
 	<Package name="SDB_DALE">
 		<Container name="Actions">
 			<Key ID="STR_DALE_Actions_Loadout">
