@@ -15,12 +15,45 @@ reviveMode = 0;
 disabledAI = true;
 enableDebugConsole = 1;
 allowFunctionsLog = 0;
-forceRotorLibSimulation = 2;
+forceRotorLibSimulation = 0;
 
 briefing = 0;
 joinUnassigned = 0;
 LARs_calculateSideGear = 1;
-cba_settings_hasSettingsFile = 1;
+// cba_settings_hasSettingsFile = 0;
+
+disableChannels[] = {
+	{
+		0,		// channel ID
+		true,	// disable text chat
+		true	// disable voice chat
+	},
+	{
+		1,
+		false,
+		true
+	},
+	{
+		2,
+		false,
+		true
+	},
+	{
+		3,
+		false,
+		true
+	},
+	{
+		4,
+		false,
+		true
+	},
+	{
+		5,
+		false,
+		true
+	}
+};
 
 class CfgFunctions {
 	#include "addons\LARs\blacklistArsenal\functions\blacklistArsenal.fncs"

@@ -65,7 +65,7 @@ removeAllWeapons player;
 // Wait for TFAR init
 if (! ([] call TFAR_fnc_isTeamSpeakPluginEnabled)) then {
 	
-	10000 cutText ["You are not connected to our TeamSpeak 3\nPlease join our TS3: 45.157.233.222", "BLACK OUT", -1, true];
+	10000 cutText ["You are not connected to our TeamSpeak 3\nPlease join our TS3: vek.servegame.com", "BLACK OUT", -1, true];
 
 	waitUntil {
 		sleep 10;
