@@ -121,8 +121,9 @@ heavy_vehicles = [
 ];
 
 air_vehicles = [
-	["CUP_B_USMC_DYN_MQ9", 0, 350, 0, 0],
-	["B_UAV_05_F", 0, 500, 0, 0],
+	["USAF_MQ9", 0, 350, 0, 0],
+	["USAF_RQ4A", 0, 500, 0, 0],
+	["B_UAV_05_F", 0, 550, 0, 0],
 	["CUP_B_MH6J_OBS_USA", 0, 500, 0, 0],
 	["CUP_B_MH6J_USA", 0, 500, 0, 0],
 	["CUP_B_MH6M_OBS_USA", 0, 500, 0, 0],
@@ -180,12 +181,21 @@ air_vehicles = [
 	["FIR_F16D", 0, 1500, 0, 0],
 	["FIR_F18C", 0, 1750, 0, 0],
 	["FIR_F18D", 0, 1750, 0, 0],
-	["CUP_B_A10_DYN_USA", 0, 1200, 0, 0],
-	["CUP_B_AV8B_DYN_USMC", 0, 900, 0, 0],
-	["CUP_B_C130J_USMC", 0, 200, 0, 0],
-	["CUP_B_C130J_Cargo_USMC", 0, 200, 0, 0],
-	["CUP_B_F35B_USMC", 0, 1200, 0, 0],
-	["CUP_B_F35B_Stealth_USMC", 0, 1250, 0, 0]
+	["USAF_A10", 0, 1200, 0, 0],
+	["USAF_F22", 0, 1750, 0, 0],
+	["USAF_F22_EWP_AA", 0, 1750, 0, 0],
+	["USAF_F22_EWP_AG", 0, 1750, 0, 0],
+	["USAF_F22_Heavy", 0, 1750, 0, 0],
+	["USAF_F35A", 0, 1500, 0, 0],
+	["USAF_F35A_LIGHT", 0, 1500, 0, 0],
+	["USAF_F35A_STEALTH", 0, 1500, 0, 0],
+	["USAF_C130J", 0, 200, 0, 0],
+	["USAF_C130J_Cargo", 0, 200, 0, 0],
+	["USAF_C17", 0, 300, 0, 0],
+	["usaf_kc135", 0, 300, 0, 0],
+	["Tornado_AWS_ADV_blu", 0, 1000, 0, 0],
+	["Tornado_AWS_ecr_blu", 0, 1000, 0, 0],
+	["Tornado_AWS_blu", 0, 1000, 0, 0]
 ];
 
 blufor_air = [
@@ -303,7 +313,8 @@ squads = [];
 
 // All the UAVs must be declared here
 uavs = [
-	"CUP_B_USMC_DYN_MQ9",
+	"USAF_MQ9",
+	"USAF_RQ4A",
 	"B_UAV_05_F"
 ];
 
