@@ -8,20 +8,18 @@ removeBackpack _unit;
 removeHeadgear _unit;
 removeGoggles _unit;
 
-_unit addWeapon "hgun_PDW2000_F";
-_unit addPrimaryWeaponItem "30Rnd_9x21_Mag";
-_unit addWeapon "hgun_P07_F";
-_unit addHandgunItem "16Rnd_9x21_Mag";
+_unit addWeapon "CUP_arifle_AKS74U";
+_unit addPrimaryWeaponItem "CUP_30Rnd_545x39_AK74_plum_M";
 
 for "_i" from 1 to 2 do {_unit addItemToUniform "FirstAidKit";};
-for "_i" from 1 to 3 do { _unit addItemToUniform  "16Rnd_9x21_Mag";};
-_unit addVest "V_TacVest_camo";
-for "_i" from 1 to 3 do { _unit addItemToVest "30Rnd_9x21_Mag";};
-for "_i" from 1 to 2 do { _unit addItemToVest "MiniGrenade";};
+_unit addVest "CUP_Vest_RUS_6B45_Sh117_BeigeDigital";
+for "_i" from 1 to 3 do { _unit addItemToVest "CUP_30Rnd_545x39_AK74_plum_M";};
+for "_i" from 1 to 2 do { _unit addItemToVest "CUP_HandGrenade_RGD5";};
 for "_i" from 1 to 2 do { _unit addItemToVest "SmokeShell";};
 
-_unit addHeadgear "H_Cap_headphones";
-_unit addGoggles "G_Balaclava_combat";
+_unit addHeadgear "H_Tank_black_F";
+_unit addGoggles "CUP_RUS_Balaclava_blk_v2";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemRadio";
+_unit linkItem "CUP_NVG_HMNVS_Hide";
