@@ -8,6 +8,7 @@ _vehicleClassnames = [huron_typename];
 } foreach (light_vehicles + heavy_vehicles + air_vehicles + static_vehicles + support_vehicles) ;
 
 while { true } do {
+	0 setRain 0;
 
 	waitUntil { sleep 0.3; count allCurators > 0 };
 
@@ -37,6 +38,15 @@ while { true } do {
 
 	{
 		_zgm = _x;
+
+		// possible fix for missing zeus addons?
+		_allAddons = curatorAddons _zgm;
+		if (!(_zgm getVariable ["ADDED_CUP_MODS", false])) then {
+			removeallCuratorAddons _zgm;
+			_zgm addCuratorAddons ("true" configClasses (configfile >> "CfgPatches") apply {configName _x});
+			_zgm setVariable ["ADDED_CUP_MODS", true];
+		};
+
 		_zgm addCuratorEditableObjects [_zeusunits,true];
 		_zgm removeCuratorEditableObjects [_units_to_remove,true];
 

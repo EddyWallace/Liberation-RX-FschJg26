@@ -5,11 +5,11 @@ onLoadMission = $STR_MISSION_DESCRIPTION;
 overviewText = $STR_MISSION_DESCRIPTION;
 overviewPicture = "res\liberation.paa";
 loadScreen = "res\liberation.paa";
-onLoadIntro = "Welcome on the Liberaton RX planet.";
+onLoadIntro = "Welcome on the Liberaton RX planet. Modified by V.E.K.";
 
 respawn = 3;
 respawndelay = 5;
-respawnButton = 0;
+respawnButton = 1;
 respawnOnStart = 0;
 reviveMode = 0; 
 disabledAI = true;
@@ -20,7 +20,11 @@ forceRotorLibSimulation = 0;
 briefing = 0;
 joinUnassigned = 0;
 LARs_calculateSideGear = 1;
-// cba_settings_hasSettingsFile = 0;
+
+// Corpse management?
+corpseManagerMode = 1;
+corpseLimit = 25;
+corpseRemovalMinTime = 60;
 
 disableChannels[] = {
 	{
@@ -73,7 +77,7 @@ class cfgSounds {
 class Header {
 	gameType = CTI;
 	minPlayers = 1;
-	maxPlayers = 22;
+	maxPlayers = 41;
 };
 
 class CfgDebriefing {
@@ -93,6 +97,7 @@ class Repaint {
 	class repaintVehicle {};
 };
 
+#include "GREUH\UI\GREUH_interface.hpp"
 #include "ui\liberation_interface.hpp"
 #include "ui\liberation_notifications.hpp"
 #include "ui\mission_params.hpp"

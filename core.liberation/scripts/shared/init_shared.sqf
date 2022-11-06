@@ -41,6 +41,7 @@ remote_call_showinfo = compileFinal preprocessFileLineNumbers "scripts\client\re
 remote_call_a3w_info = compileFinal preprocessFileLineNumbers "scripts\client\remotecall\remote_call_a3w_info.sqf";
 remote_call_tunnel_success = compileFinal preprocessFileLineNumbers "scripts\client\remotecall\remote_call_tunnel_success.sqf";
 remote_call_load_context = compileFinal preprocessFileLineNumbers "scripts\client\remotecall\remote_call_load_context.sqf";
+remote_call_ace_fullHeal = compileFinal preprocessFileLineNumbers "scripts\client\remotecall\remote_call_ace_fullHeal.sqf";
 
 // Vehicle Color
 [] execVM "addons\RPT\RPT_init.sqf";

@@ -151,11 +151,28 @@ while { true } do {
 		// };
 
 		// Heal Self
+		// _idact_id = _idact_id + 1;
+		// _idact_num = _id_actions select _idact_id;
+		// if ((_fobdistance < _distarsenal || _near_lhd) && (damage player) >= 0.023) then {
+		// 	if ( _idact_num == -1 ) then {
+		// 		_idact = player addAction ["<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Actions\heal_ca'/>", { (_this select 1) playMove "AinvPknlMstpSlayWnonDnon_medic"; (_this select 1) setDamage 0;},"",999,true,true,"", ""];
+		// 		_id_actions set [_idact_id, _idact];
+		// 	};
+		// } else {
+		// 	if ( _idact_num != -1 ) then {
+		// 		player removeAction _idact_num;
+		// 		_id_actions set [_idact_id, -1];
+		// 	};
+		// };
+		
+		// Healing v2
+		_near_medicalContainer = player nearEntities [["B_Slingload_01_Medevac_F"], 5];
+		
 		_idact_id = _idact_id + 1;
 		_idact_num = _id_actions select _idact_id;
-		if ((_fobdistance < _distarsenal || _near_lhd) && (damage player) >= 0.023) then {
+		if (cursorObject in _near_medicalContainer) then {
 			if ( _idact_num == -1 ) then {
-				_idact = player addAction ["<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Actions\heal_ca'/>", { (_this select 1) playMove "AinvPknlMstpSlayWnonDnon_medic"; (_this select 1) setDamage 0;},"",999,true,true,"", ""];
+				_idact = player addAction [("<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Actions\heal_ca'/> " + (localize "STR_EDDY_Actions_healSelf")), { params ["_unit"]; [cursorObject] call remote_call_ace_fullHeal},"",999,true,true,"", ""];
 				_id_actions set [_idact_id, _idact];
 			};
 		} else {
@@ -164,6 +181,21 @@ while { true } do {
 				_id_actions set [_idact_id, -1];
 			};
 		};
+
+		_idact_id = _idact_id + 1;
+		_idact_num = _id_actions select _idact_id;
+		if (cursorObject in _near_medicalContainer) then {
+			if ( _idact_num == -1 ) then {
+				_idact = player addAction [("<img size='1' image='\a3\ui_f\data\IGUI\Cfg\Actions\heal_ca'/> " + (localize "STR_EDDY_Actions_healOther")), { params ["_unit"]; [cursorObject, true] call remote_call_ace_fullHeal},"",999,true,true,"", ""];
+				_id_actions set [_idact_id, _idact];
+			};
+		} else {
+			if ( _idact_num != -1 ) then {
+				player removeAction _idact_num;
+				_id_actions set [_idact_id, -1];
+			};
+		};
+
 
 		// Take Leadrship
 		// _idact_id = _idact_id + 1;
@@ -335,48 +367,48 @@ while { true } do {
 		};
 
 		// Pack Beacon
-		_idact_id = _idact_id + 1;
-		_idact_num = _id_actions select _idact_id;
-		if (!_near_lhd && typeOf cursorObject == mobile_respawn && ([player, cursorObject] call is_owner) ) then {
-			if ( _idact_num == -1 ) then {
-				_idact = player addAction ["<t color='#FFFF00'>" + localize "STR_PACK_BEACON" + "</t> <img size='1' image='res\ui_deployfob.paa'/>","scripts\client\actions\do_beacon_pack.sqf",cursorObject,-950,true,true,"","!(cursorObject getVariable ['tent_in_use', false])"];
-				_id_actions set [_idact_id, _idact];
-			};
-		} else {
-			if ( _idact_num != -1 ) then {
-				player removeAction _idact_num;
-				_id_actions set [_idact_id, -1];
-			};
-		};
-
-		// UnPack Beacon
-		_idact_id = _idact_id + 1;
-		_idact_num = _id_actions select _idact_id;
-		if (!_near_lhd && (backpackContainer player) getVariable ["GRLIB_mobile_respawn_bag", false]) then {
-			if ( _idact_num == -1 ) then {
-				_idact = player addAction ["<t color='#FFFF00'>" + localize "STR_UNPACK_BEACON" + "</t> <img size='1' image='res\ui_deployfob.paa'/>","scripts\client\actions\do_beacon_unpack.sqf","",-950,true,true,"",""];
-				_id_actions set [_idact_id, _idact];
-			};
-		} else {
-			if ( _idact_num != -1 ) then {
-				player removeAction _idact_num;
-				_id_actions set [_idact_id, -1];
-			};
-		};
-
-		// Options
-		// private _idact_options = _id_actions select 26;
-		// if ( (_fobdistance < _distredeploy || _near_lhd) ) then {
-		// 	if ( _idact_options == -1 ) then {
-		// 		_idact = player addAction ["<t color='#FF8000'>" + localize "STR_EXTENDED_OPTIONS" + "</t>","GREUH\scripts\GREUH_dialog.sqf","",-997,false,true];
-		// 		_id_actions set [26, _idact];
+		// _idact_id = _idact_id + 1;
+		// _idact_num = _id_actions select _idact_id;
+		// if (!_near_lhd && typeOf cursorObject == mobile_respawn && ([player, cursorObject] call is_owner) ) then {
+		// 	if ( _idact_num == -1 ) then {
+		// 		_idact = player addAction ["<t color='#FFFF00'>" + localize "STR_PACK_BEACON" + "</t> <img size='1' image='res\ui_deployfob.paa'/>","scripts\client\actions\do_beacon_pack.sqf",cursorObject,-950,true,true,"","!(cursorObject getVariable ['tent_in_use', false])"];
+		// 		_id_actions set [_idact_id, _idact];
 		// 	};
 		// } else {
-		// 	if ( _idact_options != -1 ) then {
-		// 		player removeAction _idact_options;
-		// 		_id_actions set [26, -1];
+		// 	if ( _idact_num != -1 ) then {
+		// 		player removeAction _idact_num;
+		// 		_id_actions set [_idact_id, -1];
 		// 	};
 		// };
+
+		// // UnPack Beacon
+		// _idact_id = _idact_id + 1;
+		// _idact_num = _id_actions select _idact_id;
+		// if (!_near_lhd && (backpackContainer player) getVariable ["GRLIB_mobile_respawn_bag", false]) then {
+		// 	if ( _idact_num == -1 ) then {
+		// 		_idact = player addAction ["<t color='#FFFF00'>" + localize "STR_UNPACK_BEACON" + "</t> <img size='1' image='res\ui_deployfob.paa'/>","scripts\client\actions\do_beacon_unpack.sqf","",-950,true,true,"",""];
+		// 		_id_actions set [_idact_id, _idact];
+		// 	};
+		// } else {
+		// 	if ( _idact_num != -1 ) then {
+		// 		player removeAction _idact_num;
+		// 		_id_actions set [_idact_id, -1];
+		// 	};
+		// };
+
+		// Options
+		private _idact_options = _id_actions select 26;
+		if ( (_fobdistance < _distredeploy || _near_lhd) ) then {
+			if ( _idact_options == -1 ) then {
+				_idact = player addAction ["<t color='#FF8000'>" + localize "STR_EXTENDED_OPTIONS" + "</t>","GREUH\scripts\GREUH_dialog.sqf","",-997,false,true];
+				_id_actions set [26, _idact];
+			};
+		} else {
+			if ( _idact_options != -1 ) then {
+				player removeAction _idact_options;
+				_id_actions set [26, -1];
+			};
+		};
 
 		// Admin Menu
 		_idact_id = _idact_id + 1;
@@ -426,7 +458,7 @@ while { true } do {
 		// FOB Sign Actions
 		if (!_near_lhd && _fobdistance < _distfob && cursorObject isKindof FOB_sign) then {
 			if (count (actionIDs cursorObject) == 0) then {
-				cursorObject addAction ["<t color='#FFFFFF'>" + "-= Hall of Fame =-" + "</t>",{([] call F_hof_msg) spawn BIS_fnc_dynamicText},"",999,true,true,"","[] call is_menuok",5];
+				// cursorObject addAction ["<t color='#FFFFFF'>" + "-= Hall of Fame =-" + "</t>",{([] call F_hof_msg) spawn BIS_fnc_dynamicText},"",999,true,true,"","[] call is_menuok",5];
 				cursorObject addAction ["<t color='#FFFFFF'>" + localize "STR_READ_ME" + "</t>",{createDialog "liberation_notice"},"",998,true,true,"","[] call is_menuok",5];
 				cursorObject addAction ["<t color='#FFFFFF'>" + localize "STR_TIPS" + "</t>",{createDialog "liberation_tips"},"",997,true,true,"","[] call is_menuok",5];
 			};

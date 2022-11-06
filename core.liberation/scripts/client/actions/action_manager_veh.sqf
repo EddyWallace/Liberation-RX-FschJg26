@@ -52,7 +52,7 @@ while { true } do {
 		};
 
 		if (!([_vehicle] call is_public)) then {
-			_vehicle addAction ["<t color='#00F0F0'>Make Public</t>", "scripts\shared\functions\F_setPublic.sqf", "", -910, false, true, "", "[_target] call is_menuok && !(typeOf _target in uavs)", _distvehclose];
+			_vehicle addAction ["<t color='#00F0F0'>" + localize "STR_EDDY_Actions_makePublic" + "</t>", "scripts\shared\functions\F_setPublic.sqf", "", -910, false, true, "", "[_target] call is_menuok && !(typeOf _target in uavs)", _distvehclose];
 		};
 
 

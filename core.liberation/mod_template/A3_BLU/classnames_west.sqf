@@ -3,7 +3,7 @@
 // Default classname: scripts\shared\default_classnames.sqf
 // Advanced definition: scripts\shared\classnames.sqf
 
-huron_typename = "B_Heli_Transport_03_unarmed_F";  // comment to use value from lobby/server.cfg
+huron_typename = "CUP_B_MH47E_USA";  // comment to use value from lobby/server.cfg
 FOB_typename = "Land_Cargo_HQ_V1_F";
 FOB_box_typename = "B_Slingload_01_Cargo_F";
 FOB_truck_typename = "rhsusf_m113_usarmy_unarmed" ;
@@ -135,7 +135,6 @@ air_vehicles = [
 	["CUP_B_AH64D_DL_USA", 0, 1000, 0, 0],
 	["CUP_B_CH47F_USA", 0, 650, 0, 0],
 	["CUP_B_CH47F_VIV_USA", 0, 650, 0, 0],
-	["CUP_B_MH47E_USA", 0, 700, 0, 0],
 	["CUP_B_MH60L_DAP_2x_US", 0, 650, 0, 0],
 	["CUP_B_MH60L_DAP_4x_US", 0, 700, 0, 0],
 	["CUP_B_UH60M_US", 0, 600, 0, 0],
@@ -238,6 +237,8 @@ static_vehicles_AI = [
 ];
 
 support_vehicles_west = [
+	["ACE_Track",0,0,0,0],
+	["ACE_Wheel",0,0,0,0],
 	["CUP_B_nM1038_Ammo_USA_DES", 0, 150, 0, 0],
 	["CUP_B_nM1038_Repair_USA_DES", 0, 150, 0, 0],
 	["CUP_B_MTVR_Ammo_USA", 0, 150, 0, 0],

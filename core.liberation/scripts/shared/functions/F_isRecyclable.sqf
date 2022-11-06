@@ -18,6 +18,9 @@ if ( _alive && _onfoot && _R3F_move && _far_lhd && _nearfob && _noflight && _r3f
 	private _manned = _vehicle getVariable ["GRLIB_vehicle_manned", false];
 	if (getPlayerUID player == _owner_id && ((count crew _vehicle) == 0 || _manned)) exitWith { _ret = true };
 	if ([_vehicle] call F_getBuildPerm) exitWith { _ret = true };
+
+	// Added for public vehicle.
+	if ([_vehicle] call is_public) exitWith { _ret = true };
 };
 
 _ret;

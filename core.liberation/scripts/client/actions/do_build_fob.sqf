@@ -37,21 +37,32 @@ if(_clearedtobuildfob) then {
 	};
 };
 
-if (!_clearedtobuildfob) then {
-	hint format [localize "STR_FOB_BUILDING_IMPOSSIBLE",floor _minfobdist,floor _distfob];
+// if (!_clearedtobuildfob) then {
+// 	hint format [localize "STR_FOB_BUILDING_IMPOSSIBLE",floor _minfobdist,floor _distfob];
+// } else {
+// 	if ( !_clearedtobuildsector ) then {
+// 		hint format [localize "STR_FOB_BUILDING_IMPOSSIBLE_SECTOR",floor _minsectordist,floor _distsector];
+// 	} else {
+// 		if (typeOf _box == FOB_box_outpost) then {
+// 			buildtype = 98;
+// 			dobuild = 1;
+// 		} else {
+// 			buildtype = 99;
+// 			dobuild = 1;
+// 		};
+// 		waitUntil {sleep 0.3; dobuild == 0};
+// 		if (build_confirmed == 0) then { deleteVehicle _box };
+// 	};
+// };
+
+if (typeOf _box == FOB_box_outpost) then {
+	buildtype = 98;
+	dobuild = 1;
 } else {
-	if ( !_clearedtobuildsector ) then {
-		hint format [localize "STR_FOB_BUILDING_IMPOSSIBLE_SECTOR",floor _minsectordist,floor _distsector];
-	} else {
-		if (typeOf _box == FOB_box_outpost) then {
-			buildtype = 98;
-			dobuild = 1;
-		} else {
-			buildtype = 99;
-			dobuild = 1;
-		};
-		waitUntil {sleep 0.3; dobuild == 0};
-		if (build_confirmed == 0) then { deleteVehicle _box };
-	};
+	buildtype = 99;
+	dobuild = 1;
 };
+waitUntil {sleep 0.3; dobuild == 0};
+if (build_confirmed == 0) then { deleteVehicle _box };
+
 _box setVariable ["box_in_use", false, true];

@@ -44,8 +44,8 @@ GRLIB_wildlife_manager = ["Wildlife",1] call bis_fnc_getParamValue;
 GRLIB_Patrol_manager = ["Patrol",1] call bis_fnc_getParamValue;
 GRLIB_ammo_bounties = [ "AmmoBounties",0] call bis_fnc_getParamValue;
 GRLIB_civ_penalties = [ "CivPenalties",0] call bis_fnc_getParamValue;
-GRLIB_halo_param = ["HaloJump",1] call bis_fnc_getParamValue;
-GRLIB_blufor_defenders = [ "BluforDefenders",1] call bis_fnc_getParamValue;
+GRLIB_halo_param = ["HaloJump",0] call bis_fnc_getParamValue;
+GRLIB_blufor_defenders = [ "BluforDefenders",0] call bis_fnc_getParamValue;
 //------------------------------------------------------------------------
 GRLIB_admin_menu = ["AdminMenu",1] call bis_fnc_getParamValue;
 GRLIB_cleanup_vehicles = ["CleanupVehicles",1800] call bis_fnc_getParamValue;

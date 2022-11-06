@@ -329,7 +329,7 @@ while { true } do {
 				deleteVehicle _vehicle;
 				buildtype = 1;
 				dobuild = 0;
-				sleep 2;	// time to trap build canceled
+				sleep 1;	// time to trap build canceled
 			};
 
 			if ( build_confirmed == 2 ) then {
@@ -402,9 +402,9 @@ while { true } do {
 					};
 
 					// Mobile respawn
-					if ( _classname == mobile_respawn ) then {
-						[_vehicle, "add"] remoteExec ["addel_beacon_remote_call", 2];
-					};
+					// if ( _classname == mobile_respawn ) then {
+					// 	[_vehicle, "add"] remoteExec ["addel_beacon_remote_call", 2];
+					// };
 
 					// A3 / R3F Inventory
 					if ( buildtype == 10 && !(_classname in GRLIB_vehicle_whitelist) ) then {

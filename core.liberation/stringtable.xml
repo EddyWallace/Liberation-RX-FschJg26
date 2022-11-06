@@ -6292,4 +6292,49 @@
 			</Key>
 		</Container>
 	</Package>
+
+	<Package name="EDDY_HEALING">
+		<Container name="Actions">
+			<Key ID="STR_EDDY_Actions_healSelf">
+				<Original>Self heal</Original>
+				<Dutch>Selvhelbredende</Dutch>
+				<German>Selbstheilung</German>
+				<Chinesesimp>自我修复</Chinesesimp>
+				<Chinese>自我修復</Chinese>
+				<Japanese>自己治癒</Japanese>
+			</Key>
+			<Key ID="STR_EDDY_Actions_healSelf_hint">
+				<Original>Successfully healed yourself</Original>
+				<Dutch>Helbredt dig selv med succes</Dutch>
+				<German>Erfolgreich selbst geheilt</German>
+				<Chinesesimp>成功治愈了自己</Chinesesimp>
+				<Chinese>成功治癒了自己</Chinese>
+				<Japanese>自身の回復に成功</Japanese>
+			</Key>
+			<Key ID="STR_EDDY_Actions_healOther">
+				<Original>Heal Others</Original>
+				<Dutch>Helbred andre</Dutch>
+				<German>Andere Heilen</German>
+				<Chinesesimp>治愈他人</Chinesesimp>
+				<Chinese>治愈他人</Chinese>
+				<Japanese>他人を癒す</Japanese>
+			</Key>
+			<Key ID="STR_EDDY_Actions_healOther_hint">
+				<Original>You were healed by: %1</Original>
+				<Dutch>Du blev helbredt af: %1</Dutch>
+				<German>Du wurdest geheilt von: %1</German>
+				<Chinesesimp>你被治愈了: %1</Chinesesimp>
+				<Chinese>你被治癒了: %1</Chinese>
+				<Japanese>%1 によって癒されました</Japanese>
+			</Key>
+			<Key ID="STR_EDDY_Actions_makePublic">
+				<Original>Make Public</Original>
+				<Dutch>Gør offentlig</Dutch>
+				<German>Öffentlich machen</German>
+				<Chinesesimp>公开</Chinesesimp>
+				<Chinese>公開</Chinese>
+				<Japanese>公表します</Japanese>
+			</Key>
+		</Container>
+	</Package>
 </Project>

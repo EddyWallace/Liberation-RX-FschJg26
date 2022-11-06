@@ -14,9 +14,9 @@ private _object_created = [];
 	clearBackpackCargoGlobal _object;
 
 	// Mobile respawn
-	if (_x == mobile_respawn) then {
-		[_object, "add"] remoteExec ["addel_beacon_remote_call", 2];
-	};
+	// if (_x == mobile_respawn) then {
+	// 	[_object, "add"] remoteExec ["addel_beacon_remote_call", 2];
+	// };
 
 	// MPKilled
 	_object addMPEventHandler ["MPKilled", {_this spawn kill_manager}];

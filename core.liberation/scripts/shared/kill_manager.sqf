@@ -114,6 +114,9 @@ if ( isServer ) then {
 					stats_opfor_soldiers_killed = stats_opfor_soldiers_killed + 1;
 					if ( isplayer _killer ) then {
 						stats_opfor_killed_by_players = stats_opfor_killed_by_players + 1;
+
+						// Player UID, Ammo
+						[(getPlayerUID _killer), 3] remoteExec ["F_addPlayerAmmo", 2]; // Add ammo to player
 						if (GRLIB_ACE_enabled) then { [_killer, 1] remoteExec ["addScore", 2] };
 					};
 
